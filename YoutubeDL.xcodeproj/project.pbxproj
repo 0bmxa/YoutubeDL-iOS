@@ -87,9 +87,9 @@
 		7705446C1D9FFB8100A8EFF0 /* YoutubeDLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeDLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		770544701D9FFB8100A8EFF0 /* YoutubeDLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeDLUITests.swift; sourceTree = "<group>"; };
 		770544721D9FFB8100A8EFF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		775DD8761D9FFEE1009818F1 /* BZip2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BZip2.framework; path = Frameworks/BZip2.framework; sourceTree = "<group>"; };
-		775DD8771D9FFEE1009818F1 /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenSSL.framework; path = Frameworks/OpenSSL.framework; sourceTree = "<group>"; };
-		775DD8781D9FFEE1009818F1 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = Frameworks/Python.framework; sourceTree = "<group>"; };
+		775DD8761D9FFEE1009818F1 /* BZip2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BZip2.framework; sourceTree = "<group>"; };
+		775DD8771D9FFEE1009818F1 /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenSSL.framework; sourceTree = "<group>"; };
+		775DD8781D9FFEE1009818F1 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Python.framework; sourceTree = "<group>"; };
 		775DD87F1DA00178009818F1 /* YoutubeDL-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YoutubeDL-Bridging-Header.h"; sourceTree = "<group>"; };
 		775DD8831DA0019B009818F1 /* PythonBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PythonBridge.h; sourceTree = "<group>"; };
 		775DD8841DA0019B009818F1 /* PythonBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PythonBridge.m; sourceTree = "<group>"; };
@@ -148,9 +148,6 @@
 			children = (
 				77ABF8B51DA937B00004858E /* youtube_dl */,
 				775DD8971DA00CD1009818F1 /* Python Code */,
-				775DD8761D9FFEE1009818F1 /* BZip2.framework */,
-				775DD8771D9FFEE1009818F1 /* OpenSSL.framework */,
-				775DD8781D9FFEE1009818F1 /* Python.framework */,
 				7705444D1D9FFB8100A8EFF0 /* YoutubeDL */,
 				770544641D9FFB8100A8EFF0 /* YoutubeDLTests */,
 				7705446F1D9FFB8100A8EFF0 /* YoutubeDLUITests */,
@@ -211,6 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				77ABF8B01DA290C50004858E /* WebImage.framework */,
+				775DD8761D9FFEE1009818F1 /* BZip2.framework */,
+				775DD8771D9FFEE1009818F1 /* OpenSSL.framework */,
+				775DD8781D9FFEE1009818F1 /* Python.framework */,
 				775DD8A31DA0299A009818F1 /* AVKit.framework */,
 				775DD88A1DA00339009818F1 /* libz.tbd */,
 				775DD8881DA00303009818F1 /* libcompression.tbd */,

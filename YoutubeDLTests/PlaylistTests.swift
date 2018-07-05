@@ -10,17 +10,6 @@ import XCTest
 import Foundation
 
 class PlaylistTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testInit() {
         let playlist = Playlist(url: URL(string: "http://youtube.com")!)
 
@@ -41,9 +30,4 @@ class PlaylistTests: XCTestCase {
         XCTAssertEqual(originalPlaylist.id, deserializedPlayist.id)
         XCTAssertEqual(originalPlaylist.title, deserializedPlayist.title)
     }
-    
-    func testUpdate() {
-        
-    }
-    
 }
