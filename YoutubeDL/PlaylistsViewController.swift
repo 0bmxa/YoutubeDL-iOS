@@ -1,7 +1,6 @@
 import UIKit
 
 class PlaylistsViewController: UITableViewController {
-
     var detailViewController: PlaylistViewController? = nil
 
     var objects: [Playlist] {
@@ -10,9 +9,6 @@ class PlaylistsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        addListFromString(stringUrl: "https://www.youtube.com/playlist?list=PLBsP89CPrMeMKjHnLfO3WAhiOOxiv5Xqo")
-//        addListFromString(stringUrl: "https://www.youtube.com/watch?v=8GkqkqCini0&list=PLH-huzMEgGWDSuoidhR6uj3-sb_FAEt0A")
         
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem
@@ -28,11 +24,6 @@ class PlaylistsViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
         super.viewWillAppear(animated)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func update() {
@@ -62,9 +53,10 @@ class PlaylistsViewController: UITableViewController {
 
         self.present(alert, animated: true)
     }
+}
 
-    // MARK: - Segues
-
+// MARK: - Segues
+extension PlaylistsViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
@@ -76,9 +68,10 @@ class PlaylistsViewController: UITableViewController {
             }
         }
     }
+}
 
-    // MARK: - Table View
-
+// MARK: - Table View
+extension PlaylistsViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -118,7 +111,4 @@ class PlaylistsViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
-
 }
-

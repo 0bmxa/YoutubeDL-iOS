@@ -13,24 +13,9 @@ import Dispatch
 import WebImage
 
 class PlaylistViewController: UITableViewController {
-
     var playlist: Playlist?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        print("Loaded Subcontroller...")
-        // Do any additional setup after loading the view, typically from a nib.
-        // self.configureView()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return playlist?.videos.count ?? 0;
     }
     
@@ -60,36 +45,35 @@ class PlaylistViewController: UITableViewController {
             }
         }
         return linkLocation
-        
     }
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showVideo" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                guard let video = playlist?.videos[indexPath.row] else {
-                    return;
-                }
-
-                let controller = segue.destination as! AVPlayerViewController
-                
-                /// <#Description#>
-                let player = AVPlayer(url: playerUrl(video: video))
-                if video.watchedPosition > 0 {
-                    player.seek(to: CMTime(seconds: Double(video.watchedPosition), preferredTimescale: 1))
-                }
-                
-                player.addPeriodicTimeObserver(forInterval: CMTime.init(seconds: 1.0, preferredTimescale: 1), queue: nil, using: {
-                    [weak self] (time) in
-                    video.watchedPosition = Int(time.seconds)
-                    DataStore.sharedStore.saveToDisk()
-                    self?.tableView.reloadRows(at: [indexPath], with: .none)
-                })
-                
-                controller.player = player
-                player.play()
-            }
+        guard
+            segue.identifier == "showVideo",
+            let indexPath = self.tableView.indexPathForSelectedRow,
+            let video = playlist?.videos[indexPath.row]
+        else {
+            return
         }
+
+        let controller = segue.destination as! AVPlayerViewController
+        
+        /// <#Description#>
+        let player = AVPlayer(url: playerUrl(video: video))
+        if video.watchedPosition > 0 {
+            player.seek(to: CMTime(seconds: Double(video.watchedPosition), preferredTimescale: 1))
+        }
+        
+        player.addPeriodicTimeObserver(forInterval: CMTime.init(seconds: 1.0, preferredTimescale: 1), queue: nil, using: {
+            [weak self] (time) in
+            video.watchedPosition = Int(time.seconds)
+            DataStore.sharedStore.saveToDisk()
+            self?.tableView.reloadRows(at: [indexPath], with: .none)
+        })
+        
+        controller.player = player
+        player.play()
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -128,6 +112,4 @@ class PlaylistViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
 }
-
