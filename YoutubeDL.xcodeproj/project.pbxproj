@@ -35,7 +35,7 @@
 		775DD8B41DA18269009818F1 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DD8A11DA02093009818F1 /* Video.swift */; };
 		775DD8B51DA18269009818F1 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DD8AA1DA05A89009818F1 /* DataStore.swift */; };
 		775DD8B61DA18269009818F1 /* DownloadProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DD8AC1DA06AAE009818F1 /* DownloadProgress.swift */; };
-		77ABF8B11DA290C50004858E /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77ABF8B01DA290C50004858E /* WebImage.framework */; };
+		77ABF8B11DA290C50004858E /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77ABF8B01DA290C50004858E /* SDWebImage.framework */; };
 		77ABF8B41DA2967C0004858E /* VideoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ABF8B31DA2967C0004858E /* VideoViewCell.swift */; };
 		77ABF8B61DA937B00004858E /* youtube_dl in Copy Python Code */ = {isa = PBXBuildFile; fileRef = 77ABF8B51DA937B00004858E /* youtube_dl */; };
 /* End PBXBuildFile section */
@@ -87,9 +87,9 @@
 		7705446C1D9FFB8100A8EFF0 /* YoutubeDLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeDLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		770544701D9FFB8100A8EFF0 /* YoutubeDLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeDLUITests.swift; sourceTree = "<group>"; };
 		770544721D9FFB8100A8EFF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		775DD8761D9FFEE1009818F1 /* BZip2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BZip2.framework; sourceTree = "<group>"; };
-		775DD8771D9FFEE1009818F1 /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenSSL.framework; sourceTree = "<group>"; };
-		775DD8781D9FFEE1009818F1 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Python.framework; sourceTree = "<group>"; };
+		775DD8761D9FFEE1009818F1 /* BZip2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BZip2.framework; path = Frameworks/BZip2.framework; sourceTree = "<group>"; };
+		775DD8771D9FFEE1009818F1 /* OpenSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenSSL.framework; path = Frameworks/OpenSSL.framework; sourceTree = "<group>"; };
+		775DD8781D9FFEE1009818F1 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = Frameworks/Python.framework; sourceTree = "<group>"; };
 		775DD87F1DA00178009818F1 /* YoutubeDL-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YoutubeDL-Bridging-Header.h"; sourceTree = "<group>"; };
 		775DD8831DA0019B009818F1 /* PythonBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PythonBridge.h; sourceTree = "<group>"; };
 		775DD8841DA0019B009818F1 /* PythonBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PythonBridge.m; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		775DD8AA1DA05A89009818F1 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		775DD8AC1DA06AAE009818F1 /* DownloadProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadProgress.swift; sourceTree = "<group>"; };
 		775DD8B11DA18215009818F1 /* PlaylistTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTests.swift; sourceTree = "<group>"; };
-		77ABF8B01DA290C50004858E /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		77ABF8B01DA290C50004858E /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		77ABF8B31DA2967C0004858E /* VideoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewCell.swift; sourceTree = "<group>"; };
 		77ABF8B51DA937B00004858E /* youtube_dl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = youtube_dl; path = "Carthage/Checkouts/youtube-dl/youtube_dl"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,7 +119,7 @@
 				775DD88B1DA00339009818F1 /* libz.tbd in Frameworks */,
 				775DD8891DA00303009818F1 /* libcompression.tbd in Frameworks */,
 				775DD8871DA002EE009818F1 /* libsqlite3.tbd in Frameworks */,
-				77ABF8B11DA290C50004858E /* WebImage.framework in Frameworks */,
+				77ABF8B11DA290C50004858E /* SDWebImage.framework in Frameworks */,
 				775DD87C1D9FFEE9009818F1 /* BZip2.framework in Frameworks */,
 				775DD87D1D9FFEE9009818F1 /* OpenSSL.framework in Frameworks */,
 				775DD87E1D9FFEE9009818F1 /* Python.framework in Frameworks */,
@@ -207,7 +207,7 @@
 		775DD86C1D9FFD9D009818F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				77ABF8B01DA290C50004858E /* WebImage.framework */,
+				77ABF8B01DA290C50004858E /* SDWebImage.framework */,
 				775DD8761D9FFEE1009818F1 /* BZip2.framework */,
 				775DD8771D9FFEE1009818F1 /* OpenSSL.framework */,
 				775DD8781D9FFEE1009818F1 /* Python.framework */,
@@ -394,7 +394,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH\"\nrm -rf PythonHome\nmkdir PythonHome\ncd PythonHome\nmkdir -p lib/python2.7\ncd lib/python2.7\nunzip \"$SOURCE_ROOT\"/Frameworks/Python.framework/Versions/2.7/Resources/lib/python27.zip";
+			shellScript = "cd \"$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH\"\nrm -rf PythonHome\nmkdir PythonHome\ncd PythonHome\nmkdir -p lib/python2.7\ncd lib/python2.7\nunzip \"$SOURCE_ROOT\"/Frameworks/Python.framework/Versions/2.7/Resources/lib/python27.zip\n";
 		};
 		77ABF8B21DA290CB0004858E /* Copy Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -402,14 +402,14 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/hb/bin/carthage copy-frameworks\n";
+			shellScript = "/usr/bin/env carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
