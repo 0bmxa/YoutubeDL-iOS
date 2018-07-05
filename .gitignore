@@ -2,3 +2,4 @@ YoutubeDL.xcodeproj/xcuserdata
 DerivedData
 Python/**/*.pyc
 Carthage/
+xcuserdata/
